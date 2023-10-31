@@ -8,17 +8,14 @@ function changeTextAndButtons() {
     const content = document.getElementById("changeTextButton");
     content.innerHTML = 
     `<p>Do you want to play a game?</p>`
-    const yesButtonContainer = document.createElement("div");
-    yesButtonContainer.innerHTML = `<div class="green" id="yesButton" onclick="onYesClick()">Yes</div>`
-    yesButtonContainer.classList.add("clear"); //used to clear float value
-
-    const noButtonContainer = document.createElement("div");
-    noButtonContainer.innerHTML = `<div class="red" id="noButton" onclick="onNoClick()">No</div>`
-    noButtonContainer.classList.add("clear"); //used to clear float value
-
-    document.body.appendChild(noButtonContainer);
-    document.body.appendChild(yesButtonContainer);
-}
+    const yesButtonContainer = document.getElementById("yesButtonContainer");
+    yesButtonContainer.innerHTML = `
+      <div class="yesBox" onclick="onYesClick()">Yes</div>`
+    const noButtonContainer = document.getElementById("noButtonContainer");
+    noButtonContainer.innerHTML =
+    `<div class="noBox" onclick="onNoClick()">No</div> `
+    ;
+  }
 function onYesClick() {
 
 }

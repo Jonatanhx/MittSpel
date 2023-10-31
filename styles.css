@@ -1,49 +1,55 @@
 /* Generic stylings */
 html {
     background-color: rgb(117, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* specific stylings */
 .container {
-
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s;
-    cursor: pointer;
 }
 .gameBoxDesign {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 30px;
     width: 400px;
     height: 200px;
     background-color: whitesmoke;
     border: 1px solid whitesmoke;
     border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-right: 50px;
 }
-#green {
+.yesBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: green;
     color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
 }
-#red {
+.noBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: red;
     color: white;
-}
-#noButton {
-    background-color: white;
-    float: right;
-}
-#yesButton {
-    background-color: white;
-    float: left;
-}
-.clear {
-    clear: both;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
 }
 /* Effects */
-div:hover {
+.gameBoxDesign:hover {
     transform: scale(1.03);
+    transition: ease 0.3s;
+}
+.noBox:hover, .yesBox:hover {
+    transform: scale(1.05);
 }
